@@ -1,0 +1,20 @@
+import { Component, OnInit } from '@angular/core';
+import {ErgLibService} from 'erg-lib'
+
+@Component({
+  selector: '<%= dasherize(name) %>',
+  template: `
+    <p>
+      <%= dasherize(name) %> works!
+    </p>
+  `
+
+})
+export class <%= cassify(name) %>Component implements OnInit {
+
+  constructor(private ergService: ErgLibService) { }
+
+  ngOnInit(): void {
+  }
+
+}
