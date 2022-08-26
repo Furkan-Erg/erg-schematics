@@ -8,11 +8,9 @@ import {
 } from '@angular/forms';
 
 @Component({
-  selector: '<%= dasherize(name) %>',
-  template:`<p>
-  works
-  </p>`,
-  styles:[]
+  selector: '<%= selector %>',
+    templateUrl: './<%= dasherize(name) %>.component.html',
+    styleUrls: ['./<%= dasherize(name) %>.component.css']
 
 })
 export class <%= classify(name) %>Component implements OnInit {

@@ -1,6 +1,6 @@
 {
   "name": "erg-lib",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "scripts": {
     "build": "tsc -p tsconfig.schematics.json",
     "postbuild": "copyfiles schematics/collection.json schematics/*/schema.json schematics/*/files/** ../../dist/erg-lib"

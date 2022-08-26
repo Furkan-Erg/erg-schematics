@@ -36,8 +36,7 @@ export function ngAdd(): Rule {
 
 
     context.logger.info('Installing dependencies');
-    context.addTask(new NodePackageInstallTask(
-    ))
+    context.addTask(new NodePackageInstallTask())
     return tree;
   }
 }

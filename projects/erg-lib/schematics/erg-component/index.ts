@@ -19,7 +19,8 @@ export function ergComponentGenerator(options: ErgComponentSchema): Rule {
         applyTemplates({
           classify: strings.classify,
           dasherize: strings.dasherize,
-          name: options.name
+          name: options.name,
+          selector: options.selector
         }),
         move(normalize(`/${options.path}/${strings.dasherize(options.name)}`))
       ]
