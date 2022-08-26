@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
   `,
   styles: [
   ]
+
 })
 export class ErgLibComponent implements OnInit {
 
