@@ -8,8 +8,7 @@
     "erg-component": {
       "description": "This schematic generates custom component",
       "factory": "./erg-component/index#ergComponentGenerator",
-      "schema": "./erg-component/schema.json",
-      "aliases": ["erg"]
+      "schema": "./erg-component/schema.json"
     }
   }
 }
