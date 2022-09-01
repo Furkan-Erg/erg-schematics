@@ -33,18 +33,18 @@ export function ngAdd(): Rule {
     );
 
     applyToUpdateRecorder(recorder,
-      addImportToModule(source, modulePath, 'NgbModule', '@ng-bootstrap/ng-bootstrap')
-    );
-    applyToUpdateRecorder(recorder,
       addImportToModule(source, modulePath, 'ReactiveFormsModule', '@angular/forms')
     );
-
 
     tree.commitUpdate(recorder);
 
 
     context.logger.info('Installing dependencies');
-    context.addTask(new NodePackageInstallTask())
+    context.logger.info('{ng-bootstrap,poper.js,bootstrap} will be added to your package.json');
+    context.addTask(new NodePackageInstallTask({packageName:"@popperjs/core@^2.11.5"}));
+    context.addTask(new NodePackageInstallTask({packageName:"bootstrap@5.1.3"}));
+    context.addTask(new NodePackageInstallTask({packageName:"@ng-bootstrap/ng-bootstrap@^12.1.2"}));
     return tree;
   }
+
 }
