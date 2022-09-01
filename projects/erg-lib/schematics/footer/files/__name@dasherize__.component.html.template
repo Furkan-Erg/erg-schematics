@@ -1,0 +1,13 @@
+<footer class="footer
+" style="background-color: #0B1736">
+  <div class="container">
+    <div class="row">
+      <div class="credits text-center">
+                <span class="copyright" style="color: white">
+                    © {{date | date: 'yyyy'}}, made with love by Ergüldürenler
+
+                </span>
+      </div>
+    </div>
+  </div>
+</footer>

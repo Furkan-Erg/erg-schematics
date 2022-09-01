@@ -1,0 +1,33 @@
+.navbar{
+  margin-left: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav-link{
+  cursor: pointer;
+  border: none;
+}
+.nav-tabs{border-radius: 10px;
+border: none;
+padding-left: 10px;
+padding-right: 10px;}
+.nav-tabs:hover{
+  background-color: #FCF8F2;
+}
+.navbar-brand{
+  padding-right: 20px;
+}
+.btn-outline-secondary{
+border-color: #EE4E34;
+}
+.btn-outline-secondary:hover{
+  background-color: #EE4E34;
+}
+.btn-outline-secondary:active{
+  background-color: #EE4E34;
+}
+.btn-outline-secondary:focus{
+  background-color: #EE4E34;
+  box-shadow:0 0 0 2px #EE4E34;
+}
+

@@ -5,10 +5,31 @@
       "description": "Add UI Library to the project",
       "factory": "./ng-add/index#ngAdd"
     },
-    "erg-component": {
-      "description": "This schematic generates custom component",
-      "factory": "./erg-component/index#ergComponentGenerator",
-      "schema": "./erg-component/schema.json"
+    "footer": {
+      "description": "This schematic generates footer",
+      "factory": "./footer/index#footerGenerator",
+      "schema": "./footer/schema.json"
+    },
+    "header": {
+      "description": "This schematic generates header",
+      "factory": "./header/index#headerGenerator",
+      "schema": "./header/schema.json"
+    },
+    "login": {
+      "description": "This schematic generates login",
+      "factory": "./login/index#loginGenerator",
+      "schema": "./login/schema.json"
+    },
+    "register": {
+      "description": "This schematic generates register",
+      "factory": "./register/index#registerGenerator",
+      "schema": "./register/schema.json"
+    },
+    "remind-password": {
+      "description": "This schematic generates remind-password",
+      "factory": "./remind-password/index#remindPasswordGenerator",
+      "schema": "./remind-password/schema.json"
     }
+
   }
 }

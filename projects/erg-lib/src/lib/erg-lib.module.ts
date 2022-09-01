@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { ErgLibComponent } from './erg-lib.component';
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 
 
@@ -8,6 +9,7 @@ import { ErgLibComponent } from './erg-lib.component';
     ErgLibComponent
   ],
   imports: [
+    NgbModule
   ],
   exports: [
     ErgLibComponent

@@ -1,4 +1,4 @@
-import {Rule, Tree, SchematicContext,SchematicsException} from '@angular-devkit/schematics'
+import {Rule, Tree, SchematicContext, SchematicsException} from '@angular-devkit/schematics'
 import {NodePackageInstallTask} from '@angular-devkit/schematics/tasks'
 import {applyToUpdateRecorder} from '@schematics/angular/utility/change';
 import {addImportToModule} from '@schematics/angular/utility/ast-utils';
@@ -8,29 +8,37 @@ export function ngAdd(): Rule {
   return (tree: Tree, context: SchematicContext) => {
     context.logger.info('Adding library Module to the app...');
     const modulePath = '/src/app/app.module.ts';
-    if(!tree.exists(modulePath)){
+    if (!tree.exists(modulePath)) {
       throw new SchematicsException(`The file ${modulePath} doesn't exist...`);
     }
     const recorder = tree.beginUpdate(modulePath);
 
     const text = tree.read(modulePath);
 
-    if(text===null){
+    if (text === null) {
       throw new SchematicsException(`The file ${modulePath} doesn't exist...`)
     }
 
 
-    const source =ts.createSourceFile(
+    const source = ts.createSourceFile(
       modulePath,
       text.toString(),
       ts.ScriptTarget.Latest,
       true
-      );
+    );
 
 
     applyToUpdateRecorder(recorder,
-      addImportToModule(source,modulePath,'ErgLibModule','erg-lib')
+      addImportToModule(source, modulePath, 'ErgLibModule', 'erg-lib')
     );
+
+    applyToUpdateRecorder(recorder,
+      addImportToModule(source, modulePath, 'NgbModule', '@ng-bootstrap/ng-bootstrap')
+    );
+    applyToUpdateRecorder(recorder,
+      addImportToModule(source, modulePath, 'ReactiveFormsModule', '@angular/forms')
+    );
+
 
     tree.commitUpdate(recorder);
 

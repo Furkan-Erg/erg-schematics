@@ -1,0 +1,41 @@
+import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
+@Component({
+  selector: '<%= dasherize(name) %>',
+    templateUrl: './<%= dasherize(name) %>.component.html',
+    styleUrls: ['./<%= dasherize(name) %>.component.scss']
+})
+export class <%= classify(name) %>Component implements OnInit {
+  loginForm: FormGroup;
+ constructor(
+               private router: Router,
+               private readonly formBuilder: FormBuilder,
+   ) {
+   }
+
+   get Email() {
+     return this.loginForm.get("ePosta");
+   }
+
+   get Password() {
+
+     return this.loginForm.get("sifre");
+   }
+
+   ngOnInit() {
+
+     this.prepareForm();
+   }
+
+   prepareForm() {
+     this.loginForm = this.formBuilder.group({
+       ePosta: new FormControl("", [
+         Validators.required,
+         Validators.email,
+         Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"),
+       ]),
+       sifre: new FormControl("", [Validators.required]),
+     });
+   }
+
+}

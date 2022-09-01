@@ -1,0 +1,91 @@
+<div class="d-flex justify-content-center align-items-center h-100">
+  <div class="container-fluid h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-6">
+        <div class="card" style="border-radius: 15px">
+          <div class="card-body p-4 mx-sm-0 mx-lg-5">
+            <h2 class="text-center mb-4 fontBold">Hesaba Giriş Yap</h2>
+            <form [formGroup]="loginForm">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                  <div class="form-outline mb-3">
+                    <input
+                      required
+                      formControlName="ePosta"
+                      type="email"
+                      id="email"
+                      class="form-control form-control-lg"
+                    />
+                    <label class="form-label font" for="email">E-Posta</label>
+                    <div
+                      *ngIf="(Email?.invalid && Email?.touched) || Email?.dirty"
+                    >
+                      <small
+                        *ngIf="Email?.errors?.['required']"
+                        class="text-danger font"
+                      >E-Posta Boş Olamaz</small
+                      >
+                      <small
+                        *ngIf="Email?.errors?.['pattern']"
+                        class="text-danger font"
+                      >Lütfen Geçerli Bir E-Posta Giriniz</small
+                      >
+                    </div>
+                  </div>
+
+                  <div class="form-outline mb-3">
+                    <input
+                      required
+                      formControlName="sifre"
+                      type="password"
+                      id="Password"
+                      class="form-control form-control-lg"
+                    />
+                    <label class="form-label font" for="Password">Şifre</label>
+                    <div
+                      *ngIf="
+                        (Password?.invalid && Password?.touched) ||
+                        Password?.dirty
+                      "
+                    >
+                      <small
+                        *ngIf="Password?.errors?.['required']"
+                        class="text-danger font"
+                      >Şifre Boş Olamaz</small
+                      >
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button
+                      type="button"
+                      [disabled]="loginForm.invalid"
+                      class="btn btn-success btn-block btn-lg"
+                    >
+                      Giriş Yap
+                    </button>
+                  </div>
+
+                  <div class="row">
+                     <p class="col-6 text-center text-muted mt-5 mb-0 font">
+                       Hesabınız Yok Mu?
+                       <a [routerLink]="['/Kayit']" class="fontBold text-body"
+                       ><u>Kayıt Ol</u></a
+                       >
+                     </p>
+                    <p class="col-6 text-center text-muted mt-5 mb-0 font">
+
+                      <a routerLink="/SifremiUnuttum" class="fontBold text-body"
+                      ><u>Şifremi Unuttum</u></a
+                      >
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

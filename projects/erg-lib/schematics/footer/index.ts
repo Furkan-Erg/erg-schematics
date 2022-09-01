@@ -10,9 +10,9 @@ import {
   url
 } from "@angular-devkit/schematics";
 import {normalize, strings} from "@angular-devkit/core"
-import {ErgComponentSchema} from "./erg-component";
+import {FooterSchema} from "./footer";
 
-export function ergComponentGenerator(options: ErgComponentSchema): Rule {
+export function footerGenerator(options: FooterSchema): Rule {
   return () => {
     const templateSource = apply(
       url('./files'), [
@@ -20,7 +20,6 @@ export function ergComponentGenerator(options: ErgComponentSchema): Rule {
           classify: strings.classify,
           dasherize: strings.dasherize,
           name: options.name,
-          selector: options.selector
         }),
         move(normalize(`/${options.path}/${strings.dasherize(options.name)}`))
       ]

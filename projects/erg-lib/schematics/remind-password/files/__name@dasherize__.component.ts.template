@@ -1,0 +1,95 @@
+import { Component, OnInit } from '@angular/core';
+import {ErgLibService} from 'erg-lib'
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
+
+@Component({
+  selector: '<%= dasherize(name) %>',
+    templateUrl: './<%= dasherize(name) %>.component.html',
+    styleUrls: ['./<%= dasherize(name) %>.component.scss']
+
+})
+export class <%= classify(name) %>Component implements OnInit {
+  registerForm: FormGroup;
+  matched: boolean = false;
+
+  constructor(private ergService: ErgLibService,private readonly formBuilder: FormBuilder) { }
+
+  prepareForm() {
+      this.registerForm = this.formBuilder.group({
+        adi: new FormControl('', [
+          Validators.required,
+          Validators.pattern('^[^0-9 ]+$'),
+        ]),
+        soyadi: new FormControl('', [
+          Validators.required,
+          Validators.pattern('^[^0-9 ]+$'),
+        ]),
+        ePosta: new FormControl('', [
+          Validators.required,
+          Validators.email,
+          Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
+        ]),
+        cepTelefon: new FormControl(undefined, [
+          Validators.required,
+          Validators.minLength(11),
+          Validators.maxLength(11),
+
+        ]),
+
+        adres: new FormControl('', [
+          Validators.required,
+          Validators.maxLength(255),
+        ]),
+        sifre: new FormControl('', [Validators.required]),
+        APassword: new FormControl('', [Validators.required]),
+        TermsOfService: new FormControl(false, [Validators.requiredTrue]),
+      });
+    }
+
+    ngOnInit(): void {
+      this.prepareForm();
+    }
+
+    isMatched() {
+      if (this.APassword?.value == this.Password?.value) {
+        this.matched = true;
+      }
+    }
+
+    get Email() {
+      return this.registerForm.get('ePosta');
+    }
+
+    get Password() {
+      return this.registerForm.get('sifre');
+    }
+
+    get APassword() {
+      return this.registerForm.get('APassword');
+    }
+
+    get Name() {
+      return this.registerForm.get('adi');
+    }
+
+    get Surname() {
+      return this.registerForm.get('soyadi');
+    }
+
+    get Address() {
+      return this.registerForm.get('adres');
+    }
+
+    get Phone() {
+      return this.registerForm.get('cepTelefon');
+    }
+
+
+
+
+}
