@@ -23,12 +23,12 @@ ng add erg-lib
 ## Components and 'Alieses'
 Here is all editable custom components
 
-|   Schematic   |  Alias   |
+|   Schematic   |  Command   |
 | :-----------: | :------: |
-|  Login Page   |  login   |
-| Register Page | register |
-|  Header Page  |  header  |
-|  Footer Page  |  footer  |
+|  Login Page   |  erg-lib:login   |
+| Register Page | erg-lib:register |
+|  Header Page  |  erg-lib:header  |
+|  Footer Page  |  erg-lib:footer  |
 
 
 ## How it works
