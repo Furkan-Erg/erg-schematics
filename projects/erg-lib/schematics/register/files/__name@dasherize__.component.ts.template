@@ -14,7 +14,7 @@ import {
 
 })
 export class <%= classify(name) %>Component implements OnInit {
-  registerForm: FormGroup;
+  registerForm: FormGroup = new FormGroup({});
   matched: boolean = false;
 
   constructor(private ergService: ErgLibService,private readonly formBuilder: FormBuilder) { }

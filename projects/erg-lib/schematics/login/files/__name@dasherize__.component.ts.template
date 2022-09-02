@@ -6,7 +6,7 @@ import {Router} from "@angular/router";
     styleUrls: ['./<%= dasherize(name) %>.component.scss']
 })
 export class <%= classify(name) %>Component implements OnInit {
-  loginForm: FormGroup;
+  loginForm: FormGroup = new FormGroup({});
  constructor(
                private router: Router,
                private readonly formBuilder: FormBuilder,

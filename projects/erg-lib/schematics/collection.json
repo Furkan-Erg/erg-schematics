@@ -5,6 +5,10 @@
       "description": "Add UI Library to the project",
       "factory": "./ng-add/index#ngAdd"
     },
+    "setup-css": {
+      "description": "Add Css assets to the project",
+      "factory": "./ng-add/setup#cssAdd"
+    },
     "footer": {
       "description": "This schematic generates footer",
       "factory": "./footer/index#footerGenerator",

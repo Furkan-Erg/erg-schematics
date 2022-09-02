@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm" style="background-color: #F6EFEE" >
+<nav class="navbar navbar-expand-sm" bg-light >
   <div class="container-fluid mx-5 my-3 px-5">
     <a class="navbar-brand mx-2" [routerLink]="['']"
     >
