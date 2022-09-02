@@ -21,31 +21,31 @@ export class <%= classify(name) %>Component implements OnInit {
 
   prepareForm() {
       this.registerForm = this.formBuilder.group({
-        adi: new FormControl('', [
+        name: new FormControl('', [
           Validators.required,
           Validators.pattern('^[^0-9 ]+$'),
         ]),
-        soyadi: new FormControl('', [
+        surname: new FormControl('', [
           Validators.required,
           Validators.pattern('^[^0-9 ]+$'),
         ]),
-        ePosta: new FormControl('', [
+        email: new FormControl('', [
           Validators.required,
           Validators.email,
           Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
         ]),
-        cepTelefon: new FormControl(undefined, [
+        phone: new FormControl(undefined, [
           Validators.required,
           Validators.minLength(11),
           Validators.maxLength(11),
 
         ]),
 
-        adres: new FormControl('', [
+        address: new FormControl('', [
           Validators.required,
           Validators.maxLength(255),
         ]),
-        sifre: new FormControl('', [Validators.required]),
+        password: new FormControl('', [Validators.required]),
         APassword: new FormControl('', [Validators.required]),
         TermsOfService: new FormControl(false, [Validators.requiredTrue]),
       });
@@ -62,11 +62,11 @@ export class <%= classify(name) %>Component implements OnInit {
     }
 
     get Email() {
-      return this.registerForm.get('ePosta');
+      return this.registerForm.get('email');
     }
 
     get Password() {
-      return this.registerForm.get('sifre');
+      return this.registerForm.get('password');
     }
 
     get APassword() {
@@ -74,19 +74,19 @@ export class <%= classify(name) %>Component implements OnInit {
     }
 
     get Name() {
-      return this.registerForm.get('adi');
+      return this.registerForm.get('name');
     }
 
     get Surname() {
-      return this.registerForm.get('soyadi');
+      return this.registerForm.get('surname');
     }
 
     get Address() {
-      return this.registerForm.get('adres');
+      return this.registerForm.get('address');
     }
 
     get Phone() {
-      return this.registerForm.get('cepTelefon');
+      return this.registerForm.get('phone');
     }
 
 

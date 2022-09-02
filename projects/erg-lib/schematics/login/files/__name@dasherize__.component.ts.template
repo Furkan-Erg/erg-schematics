@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 @Component({
   selector: '<%= dasherize(name) %>',
     templateUrl: './<%= dasherize(name) %>.component.html',
@@ -14,12 +20,12 @@ export class <%= classify(name) %>Component implements OnInit {
    }
 
    get Email() {
-     return this.loginForm.get("ePosta");
+     return this.loginForm.get("email");
    }
 
    get Password() {
 
-     return this.loginForm.get("sifre");
+     return this.loginForm.get("password");
    }
 
    ngOnInit() {
@@ -29,12 +35,12 @@ export class <%= classify(name) %>Component implements OnInit {
 
    prepareForm() {
      this.loginForm = this.formBuilder.group({
-       ePosta: new FormControl("", [
+       email: new FormControl("", [
          Validators.required,
          Validators.email,
          Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"),
        ]),
-       sifre: new FormControl("", [Validators.required]),
+       password: new FormControl("", [Validators.required]),
      });
    }
 

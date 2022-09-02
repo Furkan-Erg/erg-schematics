@@ -4,31 +4,31 @@
       <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-6">
         <div class="card" style="border-radius: 15px">
           <div class="card-body p-4 mx-sm-0 mx-lg-5">
-            <h2 class="text-center mb-4 fontBold">Hesaba Giriş Yap</h2>
+            <h2 class="text-center mb-4 ">Login your account</h2>
             <form [formGroup]="loginForm">
               <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                   <div class="form-outline mb-3">
                     <input
                       required
-                      formControlName="ePosta"
+                      formControlName="email"
                       type="email"
                       id="email"
                       class="form-control form-control-lg"
                     />
-                    <label class="form-label font" for="email">E-Posta</label>
+                    <label class="form-label " for="email">E-Mail</label>
                     <div
                       *ngIf="(Email?.invalid && Email?.touched) || Email?.dirty"
                     >
                       <small
                         *ngIf="Email?.errors?.['required']"
-                        class="text-danger font"
-                      >E-Posta Boş Olamaz</small
+                        class="text-danger "
+                      >E-Mail cannot be empty</small
                       >
                       <small
                         *ngIf="Email?.errors?.['pattern']"
-                        class="text-danger font"
-                      >Lütfen Geçerli Bir E-Posta Giriniz</small
+                        class="text-danger "
+                      >Please provide valid E-Mail</small
                       >
                     </div>
                   </div>
@@ -36,12 +36,12 @@
                   <div class="form-outline mb-3">
                     <input
                       required
-                      formControlName="sifre"
+                      formControlName="password"
                       type="password"
                       id="Password"
                       class="form-control form-control-lg"
                     />
-                    <label class="form-label font" for="Password">Şifre</label>
+                    <label class="form-label " for="Password">Password</label>
                     <div
                       *ngIf="
                         (Password?.invalid && Password?.touched) ||
@@ -50,8 +50,8 @@
                     >
                       <small
                         *ngIf="Password?.errors?.['required']"
-                        class="text-danger font"
-                      >Şifre Boş Olamaz</small
+                        class="text-danger "
+                      >Password cannot be empty</small
                       >
                     </div>
                   </div>
@@ -61,21 +61,21 @@
                       [disabled]="loginForm.invalid"
                       class="btn btn-success btn-block btn-lg"
                     >
-                      Giriş Yap
+                      Login
                     </button>
                   </div>
 
                   <div class="row">
-                     <p class="col-6 text-center text-muted mt-5 mb-0 font">
-                       Hesabınız Yok Mu?
-                       <a [routerLink]="['/Kayit']" class="fontBold text-body"
-                       ><u>Kayıt Ol</u></a
+                     <p class="col-6 text-center text-muted mt-5 mb-0 ">
+                       Dont you have account
+                       <a href="" class="text-body"
+                       ><u>Register</u></a
                        >
                      </p>
-                    <p class="col-6 text-center text-muted mt-5 mb-0 font">
+                    <p class="col-6 text-center text-muted mt-5 mb-0 ">
 
-                      <a routerLink="/SifremiUnuttum" class="fontBold text-body"
-                      ><u>Şifremi Unuttum</u></a
+                      <a href="" class="text-body"
+                      ><u>I forgot my Password</u></a
                       >
                     </p>
 

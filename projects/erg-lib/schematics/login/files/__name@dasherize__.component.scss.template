@@ -1,16 +1,8 @@
-.font {
-  font-family: Arboria-Book;
-}
-.fontBold {
-  font-family: Arboria-Bold;
-}
 .card{
   margin-top: 90px;
   margin-bottom: 30px;
 }
 .btn-success {
-  background-color: #ef4136;
-  font-family: Arboria-Bold;
   border-radius: 10px;
   border-style: hidden;
 }

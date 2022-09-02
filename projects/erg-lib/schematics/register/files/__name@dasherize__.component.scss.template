@@ -1,1 +1,13 @@
-
+.card{
+  margin-top: 90px;
+  margin-bottom: 30px;
+}
+.btn-success {
+  border-radius: 10px;
+  border-style: hidden;
+}
+:host ::ng-deep .iti {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}

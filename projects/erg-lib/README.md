@@ -1,24 +1,45 @@
 # ErgLib
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+This library has default components in it to serve your request
 
-## Code scaffolding
+## Table of Contents
 
-Run `ng generate component component-name --project erg-lib` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project erg-lib`.
-> Note: Don't forget to add `--project erg-lib` or else it will be added to the default project in your `angular.json` file. 
+* [Dependencies](#dependencies)
+* [Components and Alieses](#components-and-alieses)
+* [How it Works](#how-it-works)
 
-## Build
+## Dependencies
+| erg-lib | Angular | ng-bootstrap | Bootstrap CSS | Popper |
+| :-----: | :-----: | :----------: | :-----------: | :----: |
+|  0.0.X  | 13.0.0  |    12.1.2    |     5.1.3     | 2.11.5 |
 
-Run `ng build erg-lib` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation
+We strongly recommend using [Angular CLI](https://angular.io/cli) for setting up a new project. If you have an Angular ≥ 13 CLI project, you could simply use our schematics to add erg-lib library to it.
 
-## Publishing
+```batch
+ng add erg-lib
+```
 
-After building your library with `ng build erg-lib`, go to the dist folder `cd dist/erg-lib` and run `npm publish`.
+## Components and 'Alieses'
+Here is all editable custom components
 
-## Running unit tests
+|   Schematic   |  Alias   |
+| :-----------: | :------: |
+|  Login Page   |  login   |
+| Register Page | register |
+|  Header Page  |  header  |
+|  Footer Page  |  footer  |
 
-Run `ng test erg-lib` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Further help
+## How it works
+To create custom component write line below to Terminal
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+`ng g erg-lib:<component name>`
+
+Or you can use aliases
+
+`ng g <aliases name>`
+
+Also you can use parameters like --name --path(default path is src/app)
+
+`ng g erg-lib:<component name> --name <name> --path <path>`

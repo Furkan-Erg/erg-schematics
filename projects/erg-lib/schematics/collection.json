@@ -12,28 +12,29 @@
     "footer": {
       "description": "This schematic generates footer",
       "factory": "./footer/index#footerGenerator",
-      "schema": "./footer/schema.json"
+      "schema": "./footer/schema.json",
+      "aliases": ["footer"]
     },
     "header": {
       "description": "This schematic generates header",
       "factory": "./header/index#headerGenerator",
-      "schema": "./header/schema.json"
+      "schema": "./header/schema.json",
+      "aliases": ["header"]
+
     },
     "login": {
       "description": "This schematic generates login",
       "factory": "./login/index#loginGenerator",
-      "schema": "./login/schema.json"
+      "schema": "./login/schema.json",
+      "aliases": ["login"]
     },
     "register": {
       "description": "This schematic generates register",
       "factory": "./register/index#registerGenerator",
-      "schema": "./register/schema.json"
-    },
-    "remind-password": {
-      "description": "This schematic generates remind-password",
-      "factory": "./remind-password/index#remindPasswordGenerator",
-      "schema": "./remind-password/schema.json"
+      "schema": "./register/schema.json",
+      "aliases": ["register"]
     }
+
 
   }
 }
