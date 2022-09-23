@@ -28,7 +28,11 @@
       "description": "This schematic generates register",
       "factory": "./register/index#registerGenerator",
       "schema": "./register/schema.json"
+    },
+    "navigator": {
+      "description": "This schematic generates custom navigator",
+      "factory": "./navigator/index#navigatorGenerator",
+      "schema": "./navigator/schema.json"
     }
-
   }
 }

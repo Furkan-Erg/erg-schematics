@@ -1,0 +1,28 @@
+<!--nav items-->
+<div style="background-color: #f1f3f4; font-size: small" class="d-none d-md-block">
+<div class="mx-5">
+  <div class="mx-5">
+    <div class="d-flex justify-content-center menu  align-items-center mx-5">
+      <div *ngFor="let item of navItems" class="col text-center ">
+        <a class="nav-link py-3" routerLinkActive="active" routerLink="{{item.route}}">
+          <div >{{item.title}}</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+<!--nav items-->
+<!--mobile nav items-->
+<div class="row g-0 d-block d-md-none mt-4 justify-content-center align-items-center d-flex">
+  <div class="col justify-content-center align-items-center d-flex">
+    <div ngbDropdown class="d-flex">
+      <button type="button" style="width: 250px;" class="dene" id="features" ngbDropdownToggle>Özellikler</button>
+      <div ngbDropdownMenu aria-labelledby="features">
+        <a *ngFor="let item of navItems" ngbDropdownItem routerLink="{{item.route}}">{{item.title}}</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--mobile nav items-->

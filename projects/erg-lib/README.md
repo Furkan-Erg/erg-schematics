@@ -29,6 +29,7 @@ Here is all editable custom components
 | Register Page | erg-lib:register |
 |  Header Page  |  erg-lib:header  |
 |  Footer Page  |  erg-lib:footer  |
+|  Navigator Component  |  erg-lib:navigator  |
 
 
 ## How it works

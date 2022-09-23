@@ -8,7 +8,7 @@ import {
 } from '@angular/forms';
 
 @Component({
-  selector: '<%= dasherize(name) %>',
+  selector: 'app-<%= dasherize(name) %>',
     templateUrl: './<%= dasherize(name) %>.component.html',
     styleUrls: ['./<%= dasherize(name) %>.component.scss']
 

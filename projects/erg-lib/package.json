@@ -1,13 +1,13 @@
 {
   "name": "erg-lib",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "license": "MIT",
   "author": {
     "name": "Furkan Ergüldürenler",
     "email": "furkanerguldurenler@hotmail.com"
 
   },
-  "keywords": ["angular","bootstrap","components","login","register","footer","header","custom component"],
+  "keywords": ["angular","bootstrap","components","login","register","footer","header","custom component,navigator,custom pagination,custom navigation"],
   "scripts": {
     "build": "tsc -p tsconfig.schematics.json",
     "postbuild": "copyfiles schematics/collection.json schematics/*/schema.json schematics/*/files/** ../../dist/erg-lib"
