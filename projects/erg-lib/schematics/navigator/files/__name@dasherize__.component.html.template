@@ -18,7 +18,7 @@
 <div class="row g-0 d-block d-md-none mt-4 justify-content-center align-items-center d-flex">
   <div class="col justify-content-center align-items-center d-flex">
     <div ngbDropdown class="d-flex">
-      <button type="button" style="width: 250px;" class="dene" id="features" ngbDropdownToggle>Özellikler</button>
+      <button type="button" style="width: 250px;" id="features" ngbDropdownToggle>Navigation</button>
       <div ngbDropdownMenu aria-labelledby="features">
         <a *ngFor="let item of navItems" ngbDropdownItem routerLink="{{item.route}}">{{item.title}}</a>
       </div>
