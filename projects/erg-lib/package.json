@@ -7,7 +7,7 @@
     "email": "furkanerguldurenler@hotmail.com"
 
   },
-  "keywords": ["angular","bootstrap","components","login","register","footer","header","custom component,navigator,custom pagination,custom navigation"],
+  "keywords": ["angular","bootstrap","components","login","register","footer","header","custom component","navigator","custom pagination","custom navigation"],
   "scripts": {
     "build": "tsc -p tsconfig.schematics.json",
     "postbuild": "copyfiles schematics/collection.json schematics/*/schema.json schematics/*/files/** ../../dist/erg-lib"
